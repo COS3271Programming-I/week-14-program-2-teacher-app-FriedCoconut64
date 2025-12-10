@@ -1,0 +1,14 @@
+package myMain;
+
+public class Teacher extends Person {
+	String subject;
+	
+	void Teach() {
+		System.out.println(getName() + " is teaching " + subject + ".");
+	}
+	
+	String getRole() {
+		return "teacher";
+	}
+
+}
