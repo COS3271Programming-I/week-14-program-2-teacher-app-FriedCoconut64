@@ -1,0 +1,80 @@
+package myMain;
+import java.util.Scanner;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.io.FileNotFoundException;
+import java.io.DataInput;
+import java.io.File;
+
+
+class Person {//Class with data of people
+	static Scanner userinput = new Scanner(System.in);
+	String firstName;
+	String lastName;
+	int age;
+	
+	String getName() {
+		return firstName + " " + lastName;
+	}
+	
+	String getRole() {
+		return "";
+	}
+}
+
+public class MyClass {
+	 
+	 static Scanner userinput = new Scanner(System.in);
+
+	 public static void main (String[] args){
+		 
+		ArrayList<Person> people = new ArrayList<Person>();
+		
+		
+		Student s1 = new Student();
+		s1.firstName = "Clare";
+		s1.lastName = "Stumpf";
+		s1.age = 20;
+		s1.major = "Dental Hygeine";
+		people.add(s1);
+		
+		Teacher t1 = new Teacher();
+		t1.firstName = "Bob";
+		t1.lastName = "Johnson";
+		t1.age = 45;
+		t1.subject = "English";
+		people.add(t1);
+		
+		Person p1 = new Person();
+		p1.firstName = "Brody";
+		p1.lastName = "Simpson";
+		p1.age = 27;
+		people.add(p1);
+		
+		Person p2 = new Person();
+		p2.firstName = "Melissa";
+		p2.lastName = "Paige";
+		p2.age = 73;
+		people.add(p2);
+		
+		System.out.println("--- People in the System ---");
+		
+		for (int i = 0; i < people.size(); i++) {
+			
+			Person person  = people.get(i);
+			
+			String message = "Person " + (i + 1) + ": " + person.getName() + ", age " + person.age;
+			
+			String role = person.getRole();
+			if (!role.equals("")) {
+				message += ", " + role;
+			}
+			System.out.println(message);
+		}
+	}
+}
