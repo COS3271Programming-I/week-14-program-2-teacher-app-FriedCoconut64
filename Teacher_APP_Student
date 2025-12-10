@@ -1,0 +1,14 @@
+package myMain;
+
+public class Student extends Person {
+	String major;
+
+	
+	void GoToClass() {
+		System.out.println(firstName + " is going to class.");
+	}
+	
+	String getRole() {
+		return "student";
+	}
+}
